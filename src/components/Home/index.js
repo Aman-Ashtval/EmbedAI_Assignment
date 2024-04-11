@@ -7,6 +7,8 @@ import LeftBar from "../LeftBar";
 import AnimationCard from "../AnimationCard";
 import SlickCards from "../SlickCards";
 import TryThisCards from "../TryThisCards";
+import TrySayingCards from "../TrySayingCards";
+import FooterComponent from "../FooterComponent";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -254,6 +256,897 @@ const buttonList = [
   },
 ];
 
+// random cards details
+const randomCardsList = [
+  {
+    id: uuidv4(),
+    name: "Helpers",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Helpers",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Helpers",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Helpers",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Helpers",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Helpers",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime Game Characters",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime Game Characters",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime Game Characters",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime Game Characters",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime Game Characters",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime Game Characters",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Anime",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game Characters",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game Characters",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game Characters",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game Characters",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game Characters",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Game Characters",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Comedy",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Comedy",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Comedy",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Comedy",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Comedy",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Comedy",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "VTubers",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "VTubers",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "VTubers",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "VTubers",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "VTubers",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "VTubers",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Books",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Books",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Books",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Books",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Books",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Books",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Images Generating",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Images Generating",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Images Generating",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Images Generating",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Images Generating",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Images Generating",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Discussion",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Discussion",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Discussion",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Discussion",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Discussion",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Discussion",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Language Learning",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Language Learning",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Language Learning",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Language Learning",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Language Learning",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Language Learning",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "History",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "History",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "History",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "History",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "History",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "History",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Religion",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Religion",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Religion",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Religion",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Religion",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Religion",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "Animals",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "Animals",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "Animals",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "Animals",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "Animals",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "Animals",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "politics",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "politics",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "politics",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "politics",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "politics",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "politics",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+  {
+    id: uuidv4(),
+    name: "philosophy",
+    title: "By @RandomUser124",
+    description: "Hello we are here to help you.",
+    followers: "11.5m",
+    likes: "20k",
+  },
+  {
+    id: uuidv4(),
+    name: "philosophy",
+    title: "By @RandomUser124",
+    description: "Someone who can help you in your life.",
+    followers: "13.5m",
+    likes: "29k",
+  },
+  {
+    id: uuidv4(),
+    name: "philosophy",
+    title: "By @RandomUser124",
+    description: "If you are feeling bad chat with me.",
+    followers: "16.5m",
+    likes: "25k",
+  },
+  {
+    id: uuidv4(),
+    name: "philosophy",
+    title: "By @RandomUser124",
+    description: "Hi I'm cricket coach. I can help you to play.",
+    followers: "15.5m",
+    likes: "30k",
+  },
+  {
+    id: uuidv4(),
+    name: "philosophy",
+    title: "By @RandomUser124",
+    description: "They are able to write any story they can.",
+    followers: "45.5m",
+    likes: "99k",
+  },
+  {
+    id: uuidv4(),
+    name: "philosophy",
+    title: "By @RandomUser124",
+    description: "Ask me anything",
+    followers: "21.5m",
+    likes: "52k",
+  },
+];
+
+// Try saying cards list
+const trySayingCardsList = [
+  {
+    id: uuidv4(),
+    name: "WhoWouldWin",
+    user: "@greg",
+    chats: "25.4m chats",
+    likes: "6,917 likes",
+    imageUrl:
+      "https://characterai.io/i/80/static/avatars/WhoWouldWin2.png?webp=true&amp;anim=0",
+    questions: [
+      {
+        id: uuidv4(),
+        question: "Batsman vs. Superman",
+      },
+      {
+        id: uuidv4(),
+        question: "Knight vs. Samurai",
+      },
+      {
+        id: uuidv4(),
+        question: "Lebron James vs. Michel Jordan",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    name: "Elon Musk",
+    user: "@elonwhisperer",
+    chats: "39.4m chats",
+    likes: "5,900 likes",
+    imageUrl:
+      "https://characterai.io/i/80/static/avatars/uploaded/2022/12/2/0cXVHLszZQ8idr8qGkhXB4-1PzA_qbAFmVl2V7v9NZc.webp?webp=true&amp;anim=0",
+    questions: [
+      {
+        id: uuidv4(),
+        question: "Why did you buy twitter?",
+      },
+      {
+        id: uuidv4(),
+        question: "Why did you think about Jeff Bezos' Blue origin?",
+      },
+      {
+        id: uuidv4(),
+        question: "If you could time travel. where/when would you go?",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    name: "Alternate Timeline",
+    user: "@irwan",
+    chats: "45.6m chats",
+    likes: "8,566 likes",
+    imageUrl:
+      "https://characterai.io/i/80/static/avatars/ButterflyEffect.png?webp=true&amp;anim=0",
+    questions: [
+      {
+        id: uuidv4(),
+        question: "What if I invented a portal gun?",
+      },
+      {
+        id: uuidv4(),
+        question: "Access to my own personal time machine",
+      },
+      {
+        id: uuidv4(),
+        question: "Make me negotiator for the first alien encounter",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    name: "Debate Champion",
+    user: "@Adeptus",
+    chats: "22.4m chats",
+    likes: "6,456 likes",
+    imageUrl:
+      "https://characterai.io/i/80/static/avatars/uploaded/2023/2/3/CcwSs9WLY9fmHnGsRkNDR-5Wt_5hD-U1K2dFcXvv8lM.webp?webp=true&amp;anim=0",
+    questions: [
+      {
+        id: uuidv4(),
+        question: "Star War is overrated",
+      },
+      {
+        id: uuidv4(),
+        question: "Pepsi is batter then Coca-Cola",
+      },
+      {
+        id: uuidv4(),
+        question: "Cats are batter then dogs",
+      },
+    ],
+  },
+  {
+    id: uuidv4(),
+    name: "Are-you-feeling-ok",
+    user: "@greg",
+    chats: "25.4m chats",
+    likes: "6,917 likes",
+    imageUrl:
+      "https://characterai.io/i/80/static/avatars/WhoWouldWin2.png?webp=true&amp;anim=0",
+    questions: [
+      {
+        id: uuidv4(),
+        question: "I had a hard time work today",
+      },
+      {
+        id: uuidv4(),
+        question: "How can I be more successful in my work",
+      },
+      {
+        id: uuidv4(),
+        question: "What is a good way to big change in life?",
+      },
+    ],
+  },
+];
+
 // button slider settings
 const settings = {
   dots: false,
@@ -262,16 +1155,16 @@ const settings = {
   arrows: false,
   infinite: false,
   speed: 500,
-  className: "mr-2 mt-4",
+  className: "mr-2 mt-4 mb-4",
   variableWidth: true,
 };
 
 const Home = () => {
   const [searchText, setSearchText] = useState("");
-  const [activeButtonId, updateActiveButtonId] = useState(buttonList[0].id);
+  const [activeButton, updateActiveButton] = useState(buttonList[0]);
 
   const onChangeSearchText = (event) => setSearchText(event.target.value);
-  const onSelectButton = (id) => updateActiveButtonId(id);
+  const onSelectButton = (details) => updateActiveButton(details);
 
   //   user profile view
   const renderUserProfileView = () => (
@@ -301,25 +1194,31 @@ const Home = () => {
   const renderButtonSlider = () => (
     <Slider {...settings}>
       {buttonList.map((each) => {
-        const { id, text } = each;
-        const onClickButton = () => onSelectButton(id);
+        const { id } = activeButton;
+        const onClickButton = () => onSelectButton(each);
 
         return (
-          <div key={id} className="btn-slider-bg">
+          <div key={each.id} className="btn-slider-bg">
             <button
               type="button"
-              className={`item-select-btn ${
-                activeButtonId === each.id ? "active" : null
-              }`}
+              className={`item-select-btn ${id === each.id ? "active" : null}`}
               onClick={onClickButton}
             >
-              {text}
+              {each.text}
             </button>
           </div>
         );
       })}
     </Slider>
   );
+
+  //  random selected cards
+  const rendersSelectedCards = () => {
+    const filteredList = randomCardsList.filter(
+      (each) => each.name === activeButton.text
+    );
+    return <SlickCards cardList={filteredList} />;
+  };
 
   return (
     <div className="home-bg">
@@ -342,6 +1241,15 @@ const Home = () => {
 
           {/* Buttons slider */}
           {renderButtonSlider()}
+
+          {/* selected cards */}
+          {rendersSelectedCards()}
+
+          <p className="content-title">Try saying</p>
+          <TrySayingCards cardList={trySayingCardsList} />
+
+          {/* footer component */}
+          <FooterComponent />
         </div>
       </div>
     </div>

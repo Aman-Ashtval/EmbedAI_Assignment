@@ -1,0 +1,48 @@
+.try-saying-card-bg {
+  width: 400px;
+  height: 230px;
+  padding: 12px;
+  background-color: #e4e4e7;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.try-saying-card-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.try-saying-card-name {
+  color: rgb(1, 0, 5);
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.try-saying-card-title {
+  color: rgb(1, 0, 5);
+  font-size: 13px;
+  font-weight: normal;
+  opacity: 0.5;
+  margin: 0px;
+}
+
+.question-p {
+  color: rgb(1, 0, 5);
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+  margin: 4px 0px 0px 0px;
+  padding: 10px;
+  background-color: #d3d3d8;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.question-p:hover {
+  background-color: #cbcbd4;
+}
