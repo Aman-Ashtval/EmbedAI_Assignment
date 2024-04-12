@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { Component } from "react";
 
 import Home from "./components/Home";
@@ -9,12 +9,10 @@ import "./App.css";
 class App extends Component {
   render() {
     return (
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" component={Home} />
-          <Route exact path="/create-character" component={CreateCharacter} />
-        </Switch>
-      </BrowserRouter>
+      <Switch>
+        <Route exact path="/character" component={CreateCharacter} />
+        <Route path="/" component={Home} />
+      </Switch>
     );
   }
 }

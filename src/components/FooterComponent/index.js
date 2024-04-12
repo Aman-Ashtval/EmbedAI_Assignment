@@ -35,9 +35,15 @@ const FooterComponent = () => {
         </button>
       </div>
       <div className="d-flex justify-content-center align-items-center">
-        <a className="footer-link">About</a>
-        <a className="footer-link">Careers</a>
-        <a className="footer-link">Blogs</a>
+        <a href="#" className="footer-link">
+          About
+        </a>
+        <a href="#" className="footer-link">
+          Careers
+        </a>
+        <a href="#" className="footer-link">
+          Blogs
+        </a>
       </div>
     </div>
   );

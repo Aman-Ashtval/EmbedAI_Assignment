@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 
 import { FaAnglesLeft } from "react-icons/fa6";
 import { FiChevronDown } from "react-icons/fi";
@@ -35,7 +36,7 @@ const profileMenuList = [
   },
 ];
 
-const LeftBar = () => {
+const LeftBar = (props) => {
   const userName = "Aman Kumar";
   const [showLeftBar, onToggleLeftBar] = useState(true);
 
@@ -46,6 +47,11 @@ const LeftBar = () => {
   }, []);
 
   const onClickLeftBarBtn = () => onToggleLeftBar((prevState) => !prevState);
+
+  const onClickCreateCharacter = () => {
+    const { history } = props;
+    history.replace("/character");
+  };
 
   const renderMenuListItem = (itemDetails) => {
     const { id, text, icon } = itemDetails;
@@ -72,7 +78,11 @@ const LeftBar = () => {
             <FaAnglesLeft size={12} color={"inherit"} />
           </button>
         </div>
-        <button type="button" className="create-character-btn">
+        <button
+          type="button"
+          className="create-character-btn"
+          onClick={onClickCreateCharacter}
+        >
           <TbPlus className="plus-icon" />
           Create
         </button>
@@ -99,7 +109,7 @@ const LeftBar = () => {
           >
             <div className="d-flex align-items-center">
               <p className="user-profile-p">{userName.charAt(0)}</p>
-              <p className="user-name-p">{userName}</p>
+              <p className="left-bar-user-name-p">{userName}</p>
             </div>
             <FiChevronDown color={"#7c7c87"} />
           </div>
@@ -127,4 +137,4 @@ const LeftBar = () => {
   );
 };
 
-export default LeftBar;
+export default withRouter(LeftBar);
